@@ -1,0 +1,658 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #198754;
+  padding: 1rem 2rem;
+  width: 102%; /* Ensure the navbar spans the full width of the screen */
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  font-weight: bold;
+  height: 97px;
+  
+}
+
+.navbar-brand {
+  flex: 1;
+}
+
+.navbar-brand img {
+ margin-left: 60px;
+  width: 240px;
+  height: 75px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 9px 16px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.navbar-links a:hover {
+  background-color: white;
+  color: #198754;
+  border-color: #198754;
+}
+/* Dropdown Styling */
+.dropdown-menu,
+.dropdown-menu-2 {
+  display: none;
+  position: absolute; /* Positions the dropdown relative to its parent .dropdown */
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  
+  /* Remove hardcoded top and left values */
+  top: 100%; /* This ensures the dropdown appears directly below the parent link */
+  left: 0;   /* Aligns it with the left side of the parent link */
+  width: auto; /* Makes sure the width adjusts based on content */
+  transform: translateY(0); /* Optional: fine-tune vertical alignment */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu,
+.dropdown:hover .dropdown-menu-2 {
+  display: block;
+}
+
+.dropdown {
+  position: relative; /* Parent component positioned relative */
+}
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu{
+
+left: 235px;
+
+}
+.dropdown-menu-2 {
+  display: none; /* Hidden by default */
+  position: absolute; /* Positioned relative to .dropdown */
+  background-color: #fff;
+  list-style: none;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  
+  top: 100%; /* Dropdown positioned directly below the parent */
+  left: 0;   /* Aligns with the left side of the parent */
+  width: auto; /* Adjusts width based on content */
+  white-space: nowrap; /* Prevents text wrapping */
+ 
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu,
+.dropdown:hover .dropdown-menu-2 {
+  display: block; /* Show dropdown on hover */
+}
+
+.dropdown-menu li,
+.dropdown-menu-2 li {
+  margin: 0;
+}
+
+.dropdown-menu a,
+.dropdown-menu-2 a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu-2 a:hover {
+  background-color: #f0f0f0;
+}
+
+
+.dropdown-menu li,
+.dropdown-menu-2 li {
+  margin: 0;
+}
+
+.dropdown-menu a,
+.dropdown-menu-2 a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu-2 a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown {
+  position: relative; /* Ensures that the dropdown menu aligns with this element */
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px auto;
+  transition: 0.3s;
+}
+
+.menu {
+ 
+  display: none;
+  flex-direction: column;
+  background-color: #198754;
+  position: absolute;
+  top: 70px; /* Adjust this based on the navbar height */
+  right: 1px;
+  width: 400px; /* Adjust width as needed */
+
+}
+.menu ul{
+  list-style: none;
+
+}
+
+.menu.show {
+  display: flex;
+}
+
+.menu a {
+  padding: 12px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+  .navbar-brand img {
+    margin-left: 20px; /* Adjust this value as needed */
+    height: 50px; /* Maintain the aspect ratio */
+width: 138px;
+
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust */
+    width: 100.9%;
+    position: fixed;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+}
+
+
+
+
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 412px) 
+  and (min-device-height: 800px)
+  and (max-device-height: 915px)
+  and (-webkit-device-pixel-ratio: 3.5) {
+    /* Your CSS styles */
+  
+
+
+  
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust */
+    width: 100.9%;
+    position: fixed;
+  }
+  
+  
+.menu {
+ 
+  display: none;
+  flex-direction: column;
+  background-color: #198754;
+  position: absolute;
+  top: 70px; /* Adjust this based on the navbar height */
+  right: -1px;
+  width: 430px; /* Adjust width as needed */
+
+}
+.menu ul{
+  list-style: none;
+
+}
+
+.menu.show {
+  display: flex;
+}
+
+.menu a {
+  padding: 12px;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+  }
+
+  @media only screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) {
+
+ 
+    .menu {
+ 
+      display: none;
+      flex-direction: column;
+      background-color: #198754;
+      position: absolute;
+      top: 70px; /* Adjust this based on the navbar height */
+      right: -1px;
+      width: 433px; /* Adjust width as needed */
+    
+    }
+
+
+    .dropdown-menu,
+    .dropdown-menu-2 {
+  
+  display: none;
+    }
+
+  }
+  @media only screen and (max-width: 768px) {
+    /* Styles for mobile devices */
+    
+  }
+  @media only screen and (min-device-width: 575px)  and (-webkit-device-pixel-ratio: 3) {
+
+
+    .menu {
+ 
+      display: none;
+      flex-direction: column;
+      background-color: #198754;
+      position: absolute;
+      top: 70px; /* Adjust this based on the navbar height */
+      right: -1px;
+      width: 333px; /* Adjust width as needed */
+    
+    }
+    
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust */
+    width: 100.9%;
+    position: fixed;
+  }
+  
+  .dropdown-menu,
+  .dropdown-menu-2 {
+
+display: none;
+  }
+  
+  }
+  
+@media only screen and (min-device-width: 414px) and (max-device-width: 414px) and (orientation: portrait){
+
+  .menu {
+ 
+    display: none;
+    flex-direction: column;
+    background-color: #198754;
+    position: absolute;
+    top: 70px; /* Adjust this based on the navbar height */
+    right: -1px;
+    width: 273px; /* Adjust width as needed */
+  
+  }
+
+  .dropdown-menu,
+  .dropdown-menu-2 {
+
+display: none;
+  }
+
+}
+@media only screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) {
+
+    
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust */
+    width: 100.5%;
+    position: fixed;
+  }
+  
+
+  .navbar-brand img {
+    margin-left: 20px; /* Adjust this value as needed */
+    height: 50px; /* Maintain the aspect ratio */
+width: 148px;
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  
+  .menu {
+ 
+    display: none;
+    flex-direction: column;
+    background-color: #198754;
+    position: absolute;
+    top: 70px; /* Adjust this based on the navbar height */
+    right: -1px;
+    width: 433px; /* Adjust width as needed */
+  
+  }
+  
+  .dropdown-menu,
+  .dropdown-menu-2 {
+
+color: #333;
+  }
+
+}
+
+
+
+@media (max-width: 575.98px){
+
+  
+  .navbar-brand img {
+    margin-left: 20px; /* Adjust this value as needed */
+    height: 50px; /* Maintain the aspect ratio */
+width: 138px;
+
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust */
+    width: 100.9%;
+    position: fixed;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+  .dropdown-menu a,
+  .dropdown-menu-2 a {
+    color: #333 !important; /* Maintain the dropdown text color */
+  }
+
+  .menu {
+width: 106vw;
+    right: -2px;
+    /* Adjust width as needed */
+  
+  }
+  
+  .dropdown-menu,
+  .dropdown-menu-2 {
+
+display: none;
+  }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .navbar-brand img {
+    margin-left: 20px; /* Adjust this value as needed */
+    height: 50px; /* Maintain the aspect ratio */
+width: 138px;
+
+  }
+
+  .dropdown-menu ,
+  .dropdown-menu-2 {
+
+display: none;
+  }
+  .dropdown-menu a,
+  .dropdown-menu-2 a {
+    color: #333 !important; /* Maintain the dropdown text color */
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust */
+    width: 100.9%;
+    position: fixed;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+ 
+  }
+  
+  .menu {
+    width: 101vw;
+    right: -2px;
+    /* Adjust width as needed */
+  
+  }
+
+
+  
+  .dropdown-menu,
+  .dropdown-menu-2 {
+
+display: none;
+  }
+
+
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+  .dropdown-menu a,
+  .dropdown-menu-2 a {
+    color: #333 !important; /* Maintain the dropdown text color */
+  }
+
+  .navbar-brand img {
+    margin-left: 20px; /* Adjust this value as needed */
+    height: 50px; /* Maintain the aspect ratio */
+width: 138px;
+
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem; /* Adjust padding as needed */
+    height: auto; /* Allow height to adjust */
+    width: 100.9%;
+    position: fixed;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+ 
+  }
+  
+  .menu {
+    width: 104vw;
+    right: -2px;
+    /* Adjust width as needed */
+  
+  }
+
+
+  .dropdown-menu ,
+  .dropdown-menu-2 {
+
+display: none;
+  }
+
+}
+@media (min-width: 992px) and (max-width: 1199.98px){
+  .dropdown-menu a,
+  .dropdown-menu-2 a {
+    color: #333 !important; /* Maintain the dropdown text color */
+  }
+
+  .dropdown-menu,
+  .dropdown-menu-2 {
+
+color: #333;
+  }
+  .navbar-brand img {
+    margin-left: 10px; /* Adjust this value as needed */
+    height: 70px; /* Maintain the aspect ratio */
+width: 178px;
+
+  }
+
+
+  .navbar-links a {
+
+    font-size: 0.9rem;
+    padding: 9px 4px;
+
+  }
+
+
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  .navbar-brand img {
+    margin-left: 20px;
+    height: 50px; /* Maintain the aspect ratio */
+width: 138px;
+
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+    height: auto; /* Allow height to adjust */
+    width: 100.9%;
+    position: fixed;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+ 
+  }
+  
+  .menu {
+    width: 103vw;
+    right: -2px;
+
+  
+  }
+
+
+
+}
+@media (min-width: 1200px) and (max-width: 1366.98px) {
+
+
+
+  .dropdown-menu a,
+  .dropdown-menu-2 a {
+    color: #333 !important; /* Maintain the dropdown text color */
+  }
+
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 9px 6px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+
+
+
+
+
+}
